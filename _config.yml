@@ -1,9 +1,0 @@
-title: "Michael Pitt — Particle Physicist"
-description: "Researcher at CERN exploring photon-induced processes, forward physics, and diffractive phenomena."
-url: "https://michael-pitt.github.io"
-author:
-  name: "Michael Pitt"
-  email: "you@example.com"
-permalink: pretty
-markdown: kramdown
-exclude: [README.md]
