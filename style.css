@@ -141,6 +141,20 @@ a:hover{color:#fff; text-decoration:underline; text-decoration-color:#76d2ff}
   .exp-photo{ flex:none; max-width:100%; }
 }
 
+.gif-photo {
+  max-width: 500px;
+  margin: 16px auto;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.gif-photo img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
 /* Big floating photo */
 .big-photo{position:relative; z-index:2; text-align:center; margin-bottom:-80px}
 .big-photo img{
@@ -166,4 +180,5 @@ a:focus, button:focus, .btn:focus{ outline:2px solid var(--accent); outline-offs
   *{scroll-behavior:auto !important}
   .btn, a{transition:none !important}
 }
+
 
