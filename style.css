@@ -57,17 +57,10 @@ body{
 
 /* Hero card */
 .hero-card{
-  margin-top: 100px; /* ensures card doesn't hide behind the photo */
-  padding-top: 100px; /* space for overlap effect */
+  margin-top: 100px;
+  padding-top: 100px;  /* space for the overlap */
   position: relative;
   z-index: 1;
-  display:grid; grid-template-columns: 160px 1fr; gap: 28px;
-  padding: 28px;
-  background: var(--glass);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
 }
 .avatar{
   width: 160px; height: 160px; object-fit: cover;
@@ -124,17 +117,8 @@ body{
 }
 
 /* Body text links */
-a {
-  color: #76d2ff;               /* bright CERN blue */
-  text-decoration: none;        /* no underline by default */
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-
-a:hover {
-  color: #ffffff;               /* brighten on hover */
-  text-decoration: underline;   /* subtle underline appears */
-  text-decoration-color: #76d2ff;
-}
+a { color: #76d2ff; text-decoration: none; transition: color .2s, text-decoration-color .2s; }
+a:hover { color: #fff; text-decoration: underline; text-decoration-color: #76d2ff; }
 
 .exp-block {
   margin-top: 20px;
@@ -162,8 +146,7 @@ a:hover {
   position: relative;
   z-index: 2;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: -80px; /* pull it down into the hero card */
+  margin-bottom: -80px; /* pulls the image down into the card */
 }
 
 .big-photo img {
@@ -180,3 +163,4 @@ a:hover {
   border-top: 1px solid rgba(255,255,255,0.15);
   margin: 28px 0;
 }
+
