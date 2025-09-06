@@ -118,3 +118,16 @@ body{
   .avatar{ width: 120px; height: 120px; }
   .hero-text h1{ font-size: 1.8rem }
 }
+
+/* Body text links */
+a {
+  color: #76d2ff;               /* bright CERN blue */
+  text-decoration: none;        /* no underline by default */
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: #ffffff;               /* brighten on hover */
+  text-decoration: underline;   /* subtle underline appears */
+  text-decoration-color: #76d2ff;
+}
