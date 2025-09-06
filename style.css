@@ -131,3 +131,25 @@ a:hover {
   text-decoration: underline;   /* subtle underline appears */
   text-decoration-color: #76d2ff;
 }
+
+.exp-block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exp-photo {
+  max-width: 280px;
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.exp-photo img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
