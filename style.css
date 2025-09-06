@@ -181,4 +181,49 @@ a:focus, button:focus, .btn:focus{ outline:2px solid var(--accent); outline-offs
   .btn, a{transition:none !important}
 }
 
+.more-results {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.more-results h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.result-card {
+  display: block;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.result-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.result-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.2);
+}
+
 
