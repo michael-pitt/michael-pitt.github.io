@@ -1,28 +1,83 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Some Title</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/about/CV_MichaelPitt.pdf">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Page under construction... </h1>
-				<p>Some Text ... <a href="/about">link to about...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:m_u_pitt@yahoo.com">email</a></li>
-        		<li><a href="https://github.com/michael-pitt/">github.com/michael-pitt</a></li>
-			</ul>
-		</footer>
-	</body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Pitt — Particle Physicist</title>
+  <meta name="description" content="Personal webpage of Michael Pitt, particle physicist and researcher at CERN, exploring photon-induced processes and forward physics.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico">
+  <meta property="og:title" content="Michael Pitt — Particle Physicist">
+  <meta property="og:description" content="Researcher at CERN studying the fundamental interactions of nature, including photon–photon collisions at the LHC.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/michael.jpg">
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="dot"></span>
+      <a href="/" aria-label="Home">Michael Pitt</a>
+    </div>
+    <nav class="nav">
+      <a href="https://github.com/michael-pitt" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="cv.pdf">CV</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero-card">
+      <img class="avatar" src="images/michael.jpg" alt="Photo of Michael Pitt">
+      <div class="hero-text">
+        <h1>Michael&nbsp;Pitt</h1>
+        <p class="subtitle">Particle Physicist • Researcher at CERN</p>
+        <p class="lede">
+          This is the personal webpage of <strong>Michael Pitt</strong>, particle physicist.
+        </p>
+        <p>
+          I’m a researcher at CERN working to understand the fundamental constituents of nature.
+          What are the basic interactions, and which forces act between particles? These are the
+          questions that drive my work.
+        </p>
+        <p>
+          While at CERN, I became fascinated by the fact that light—yes, electromagnetic waves—can
+          interact. In certain conditions the Large Hadron Collider effectively becomes a
+          <em>photon collider</em>.
+          See: <a href="https://cms.cern/news/lhc-photon-collider" target="_blank" rel="noopener">LHC as a photon collider (CMS)</a>.
+        </p>
+        <p>
+          Since then, I’ve been exploring the physics that emerges when photons collide,
+          including forward and diffractive processes and precision proton tagging.
+          See: <a href="https://cerncourier.com/a/cms-looks-forward-to-new-physics-with-pps/" target="_blank" rel="noopener">
+          CMS looks forward to new physics with PPS (CERN Courier)</a>.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="mailto:you@example.com">Get in touch</a>
+          <a class="btn ghost" href="https://github.com/michael-pitt" target="_blank" rel="noopener">View my code</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="refs">
+      <h2>Selected References</h2>
+      <ul>
+        <li><a href="https://cms.cern/news/lhc-photon-collider" target="_blank" rel="noopener">The LHC as a photon collider — CMS News</a></li>
+        <li><a href="https://cerncourier.com/a/cms-looks-forward-to-new-physics-with-pps/" target="_blank" rel="noopener">CMS looks forward to new physics with PPS — CERN Courier</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Michael Pitt · Built with GitHub Pages
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
