@@ -1,0 +1,120 @@
+:root{
+  --bg-dark: #0b0f14;
+  --glass: rgba(255,255,255,0.08);
+  --glass-strong: rgba(255,255,255,0.12);
+  --text: #eaf2ff;
+  --muted: #b9c7dc;
+  --accent: #4fc3f7;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  color:var(--text);
+  background: var(--bg-dark) no-repeat center/cover fixed;
+  line-height:1.6;
+}
+
+/* Background overlay with a CERN-style image + gradient */
+.bg-overlay{
+  position:fixed; inset:0;
+  background:
+    linear-gradient(180deg, rgba(5,8,13,0.6) 0%, rgba(5,8,13,0.85) 65%, rgba(5,8,13,0.95) 100%),
+    url("images/cern-bg.jpg") center/cover no-repeat fixed;
+  filter: saturate(1.05) contrast(1.05);
+  z-index:-1;
+}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:10;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 14px 28px;
+  background: linear-gradient(180deg, rgba(5,8,13,0.75), rgba(5,8,13,0.15));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brand{
+  display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.3px; font-size:1.05rem;
+}
+.brand a{ color:var(--text); text-decoration:none }
+.brand .dot{ width:10px; height:10px; background:var(--accent); border-radius:50%; box-shadow:0 0 18px var(--accent) }
+
+.nav a{
+  color:var(--muted); text-decoration:none; margin-left:18px; font-weight:600;
+  transition: color .2s ease;
+}
+.nav a:hover{ color:var(--text) }
+
+/* Layout */
+.container{
+  max-width: 1100px;
+  margin: 48px auto 80px;
+  padding: 0 20px;
+}
+
+/* Hero card */
+.hero-card{
+  display:grid; grid-template-columns: 160px 1fr; gap: 28px;
+  padding: 28px;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+.avatar{
+  width: 160px; height: 160px; object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+.hero-text h1{
+  margin:0 0 6px; font-size: 2.1rem; line-height:1.2;
+}
+.subtitle{ margin:0 0 18px; color:var(--muted); font-weight:600 }
+.lede{ font-size:1.1rem; margin: 0 0 10px }
+
+/* Buttons */
+.cta{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap }
+.btn{
+  display:inline-block; padding:10px 16px; border-radius: 12px;
+  background: linear-gradient(135deg, #4fc3f7, #6aa7ff);
+  color:#08121c; text-decoration:none; font-weight:800; letter-spacing:.2px;
+  box-shadow: 0 8px 24px rgba(79,195,247,0.35);
+  transition: transform .08s ease, box-shadow .2s ease;
+}
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 30px rgba(79,195,247,0.5) }
+.btn.ghost{
+  background: transparent; color: var(--text);
+  border: 2px solid rgba(255,255,255,0.2); box-shadow:none;
+}
+.btn.ghost:hover{ border-color: rgba(255,255,255,0.35) }
+
+/* References */
+.refs{
+  margin-top: 26px;
+  padding: 22px 26px;
+  background: var(--glass-strong);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+}
+.refs h2{ margin:0 0 10px; font-size:1.1rem }
+.refs ul{ margin:0; padding-left:18px }
+.refs a{ color:#a8d8ff; text-decoration:underline }
+.refs a:hover{ text-decoration:none }
+
+/* Footer */
+.site-footer{
+  text-align:center; color:var(--muted);
+  padding: 36px 20px 60px;
+}
+
+/* Mobile */
+@media (max-width: 720px){
+  .hero-card{ grid-template-columns: 1fr }
+  .avatar{ width: 120px; height: 120px; }
+  .hero-text h1{ font-size: 1.8rem }
+}
