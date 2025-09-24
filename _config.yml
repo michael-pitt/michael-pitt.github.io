@@ -1,0 +1,21 @@
+title: "Michael Pitt"
+description: "Personal site"
+url: "https://michael-pitt.github.io"  # or your canonical URL
+baseurl: ""                             # no subpath for user/org pages
+
+# If you want Jekyll to process Markdown pages:
+markdown: kramdown
+
+# Where the build goes
+destination: _site
+
+# Include/exclude patterns
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - scripts
+
+
